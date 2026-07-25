@@ -448,12 +448,6 @@
     <!-- ======================= TOAST ======================= -->
     <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-glow-900 text-white text-sm font-semibold px-5 py-3 rounded-full shadow-xl z-[70] hidden"></div>
 
-    <!-- Floating WhatsApp support button -->
-    <a id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Chat with ZedGlow support on WhatsApp"
-       class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-xl hover:scale-110 transition">
-        <i class="fab fa-whatsapp text-3xl"></i>
-    </a>
-
     <!-- ======================= DOWNLOAD APP banner (mobile) ======================= -->
     <div id="installBanner" class="hidden fixed bottom-0 left-0 right-0 z-40 bg-glow-900 text-white px-4 py-3 flex items-center gap-3 shadow-2xl">
         <img src="icon-192.png" alt="" class="w-10 h-10 rounded-xl shrink-0">
@@ -512,7 +506,6 @@
         .guide-arrow-up { animation: bounceUp 1s ease-in-out infinite; }
         @keyframes bounceDown { 0%,100% { transform: translateY(0); } 50% { transform: translateY(14px); } }
         @keyframes bounceUp { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
-        body.has-install-banner #waFloat { bottom: 92px; }
     </style>
 
     <script>
@@ -1105,7 +1098,6 @@
     (function initSupportLinks() {
         const msg = encodeURIComponent('Hello ZedGlow! 👋 I need some help with my beauty order.');
         const wa = 'https://wa.me/' + CONFIG.WHATSAPP_SUPPORT + '?text=' + msg;
-        $('waFloat').href = wa;
         $('waSupportBtn').href = wa;
     })();
     renderCart();
