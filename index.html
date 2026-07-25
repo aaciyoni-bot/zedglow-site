@@ -1003,19 +1003,32 @@
         sendOrderToWhatsApp(ref, order);
     }
 
+    // Real AliExpress products use the numeric itemId as their id, so we can
+    // rebuild a direct product link for one-tap re-ordering. Demo products
+    // (ids like "w1") have no real listing, so they get no link.
+    const aliLink = id => /^\d{6,}$/.test(String(id))
+        ? 'https://www.aliexpress.com/item/' + id + '.html'
+        : null;
+
     function sendOrderToWhatsApp(ref, o) {
-        // Opens WhatsApp with the order summary so you receive every order
-        // even before payment APIs are connected.
+        // Opens WhatsApp with the full order summary — including a DIRECT
+        // AliExpress link for each item — so you can re-order in one tap.
         if (!CONFIG.WHATSAPP_ORDERS) return;
+        const itemLines = cart.flatMap(i => {
+            const link = aliLink(i.id);
+            const head = `• ${i.qty}x ${i.title} — ${fmtK(itemZmw(i) * i.qty)}`;
+            return link ? [head, `   🔗 ${link}`] : [head];
+        });
         const lines = [
             `💖 *New ZedGlow Order ${'#' + ref}*`,
             `👤 ${o.name}`,
             `📞 +260${o.phone} (${o.provider.toUpperCase()})`,
             `📍 ${o.address}`,
             ``,
-            ...cart.map(i => `• ${i.qty}x ${i.title} — ${fmtK(itemZmw(i) * i.qty)}`),
+            `🛒 *Order — tap each link to buy on AliExpress:*`,
+            ...itemLines,
             ``,
-            `💰 *Total: ${fmtK(o.total)}*`
+            `💰 *Customer paid: ${fmtK(o.total)}*`
         ];
         const url = 'https://wa.me/' + CONFIG.WHATSAPP_ORDERS + '?text=' + encodeURIComponent(lines.join('\n'));
         window.open(url, '_blank');
