@@ -111,8 +111,8 @@
             </button>
         </div>
 
-        <!-- Categories -->
-        <nav class="max-w-7xl mx-auto px-4 pb-2.5 flex gap-2 items-center overflow-x-auto no-scrollbar">
+        <!-- Categories (horizontal — mobile/tablet only; desktop uses the left sidebar) -->
+        <nav class="lg:hidden max-w-7xl mx-auto px-4 pb-2.5 flex gap-2 items-center overflow-x-auto no-scrollbar">
             <button onclick="showBudget()" class="cat-chip-deal shrink-0"><i class="fas fa-fire"></i> Deals under K200</button>
             <button onclick="searchCategory('human hair lace front wig women')" class="cat-chip"><i class="fas fa-scissors mr-1.5"></i>Wigs &amp; Hair</button>
             <button onclick="searchCategory('makeup foundation lipstick set women')" class="cat-chip"><i class="fas fa-wand-magic-sparkles mr-1.5"></i>Makeup</button>
@@ -127,37 +127,45 @@
         </nav>
     </header>
 
-    <!-- ======================= HERO ======================= -->
+    <!-- ======================= HERO (slim band — store-first) ======================= -->
     <section id="heroSection" class="relative overflow-hidden bg-glow-900 text-white">
-        <div class="absolute inset-0 bg-gradient-to-br from-glow-700 via-glow-900 to-[#2a0716]"></div>
-        <div class="absolute -top-24 -right-24 w-96 h-96 bg-glow-500/30 rounded-full blur-3xl"></div>
-        <div class="absolute -bottom-32 -left-20 w-96 h-96 bg-gold/20 rounded-full blur-3xl"></div>
-        <div class="relative max-w-7xl mx-auto px-4 py-12 sm:py-16 grid sm:grid-cols-2 gap-8 items-center">
-            <div>
-                <span class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur text-glow-100 text-xs font-bold px-3 py-1.5 rounded-full border border-white/10"><i class="fas fa-sparkles text-gold-soft"></i> Handpicked beauty at wholesale prices</span>
-                <h2 class="mt-4 text-3xl sm:text-5xl font-display font-extrabold leading-tight">Glow up,<br>at <span class="bg-gradient-to-r from-gold-soft to-white bg-clip-text text-transparent">wholesale prices</span> 🇿🇲</h2>
-                <p class="mt-3 text-glow-100/90 text-sm sm:text-base max-w-md">Wigs, makeup, perfume and skincare made for the modern Zambian woman — shipped to your door. Pay in Kwacha with the mobile money you already use. No credit card. Ever.</p>
-                <div class="mt-5 flex flex-wrap gap-3 text-sm font-semibold">
-                    <span class="bg-white/10 backdrop-blur px-4 py-2 rounded-full border border-white/10"><i class="fas fa-mobile-screen mr-1 text-yellow-300"></i> MTN MoMo</span>
-                    <span class="bg-white/10 backdrop-blur px-4 py-2 rounded-full border border-white/10"><i class="fas fa-mobile-screen mr-1 text-red-400"></i> Airtel Money</span>
-                    <span class="bg-white/10 backdrop-blur px-4 py-2 rounded-full border border-white/10"><i class="fas fa-mobile-screen mr-1 text-green-400"></i> Zamtel Kwacha</span>
-                </div>
-                <div class="mt-6 flex flex-wrap gap-3">
-                    <button onclick="searchCategory('human hair lace front wig women')" class="bg-glow-600 hover:bg-glow-700 text-white font-bold px-6 py-3 rounded-full transition shadow-lg shadow-glow-900/40"><i class="fas fa-wand-magic-sparkles mr-1"></i> Shop beauty</button>
-                    <a href="#how-it-works" class="inline-flex items-center text-sm font-bold text-white/90 hover:text-white underline underline-offset-4 px-2">How it works ↓</a>
-                </div>
-            </div>
-            <div class="hidden sm:grid grid-cols-3 gap-3 text-center text-sm">
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-4 backdrop-blur"><div class="text-3xl text-gold-soft"><i class="fas fa-scissors"></i></div><p class="mt-2 font-semibold text-glow-50">Wigs &amp; hair</p></div>
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-4 backdrop-blur"><div class="text-3xl text-green-400"><i class="fas fa-mobile-screen-button"></i></div><p class="mt-2 font-semibold text-glow-50">Mobile Money</p></div>
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-4 backdrop-blur"><div class="text-3xl text-glow-200"><i class="fas fa-truck-fast"></i></div><p class="mt-2 font-semibold text-glow-50">Delivered to you</p></div>
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-4 backdrop-blur col-span-3"><p class="font-semibold text-glow-50"><i class="fas fa-shield-halved text-gold-soft mr-1"></i> Money-back guarantee on every order</p></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-glow-700 via-glow-800 to-[#2a0716]"></div>
+        <div class="relative max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+            <p class="font-display font-extrabold text-base sm:text-lg leading-tight shrink-0">
+                <i class="fas fa-wand-magic-sparkles text-gold-soft mr-1"></i>Glow up at wholesale prices 🇿🇲
+            </p>
+            <div class="flex items-center gap-1.5 text-[10px] sm:text-xs font-semibold overflow-x-auto no-scrollbar">
+                <span class="bg-white/10 px-2.5 py-1 rounded-full border border-white/10 shrink-0"><i class="fas fa-mobile-screen text-yellow-300 mr-1"></i>MTN</span>
+                <span class="bg-white/10 px-2.5 py-1 rounded-full border border-white/10 shrink-0"><i class="fas fa-mobile-screen text-red-400 mr-1"></i>Airtel</span>
+                <span class="bg-white/10 px-2.5 py-1 rounded-full border border-white/10 shrink-0"><i class="fas fa-mobile-screen text-green-400 mr-1"></i>Zamtel</span>
+                <span class="hidden sm:inline-flex bg-white/10 px-2.5 py-1 rounded-full border border-white/10 shrink-0"><i class="fas fa-shield-halved text-gold-soft mr-1"></i>Money-back</span>
             </div>
         </div>
     </section>
 
-    <!-- ======================= MAIN ======================= -->
-    <main class="max-w-7xl mx-auto px-4 py-8 w-full flex-1">
+    <!-- ======================= MAIN (AliExpress-style: left categories + product grid) ======================= -->
+    <div class="max-w-7xl mx-auto px-4 py-6 w-full flex-1 lg:flex lg:gap-6">
+
+        <!-- Desktop category sidebar -->
+        <aside class="hidden lg:block w-56 shrink-0">
+            <div class="sticky top-24 bg-white rounded-2xl shadow-sm border border-glow-100 p-2">
+                <h3 class="px-3 pt-2 pb-1.5 text-xs font-bold text-slate-400 uppercase tracking-wide">Shop by category</h3>
+                <button onclick="showBudget()" class="side-cat side-cat-deal"><i class="fas fa-fire w-5 text-center"></i> Deals under K200</button>
+                <button onclick="searchCategory('human hair lace front wig women')" class="side-cat"><i class="fas fa-scissors w-5 text-center"></i> Wigs &amp; Hair</button>
+                <button onclick="searchCategory('makeup foundation lipstick set women')" class="side-cat"><i class="fas fa-wand-magic-sparkles w-5 text-center"></i> Makeup</button>
+                <button onclick="searchCategory('perfume women eau de parfum long lasting')" class="side-cat"><i class="fas fa-spray-can-sparkles w-5 text-center"></i> Perfume</button>
+                <button onclick="searchCategory('face serum skincare cream vitamin c')" class="side-cat"><i class="fas fa-droplet w-5 text-center"></i> Skincare</button>
+                <button onclick="searchCategory('mink eyelashes false lashes 3d')" class="side-cat"><i class="fas fa-eye w-5 text-center"></i> Lashes</button>
+                <button onclick="searchCategory('press on nails gel polish set')" class="side-cat"><i class="fas fa-hand-sparkles w-5 text-center"></i> Nails</button>
+                <button onclick="searchCategory('gold plated jewelry earrings necklace women')" class="side-cat"><i class="fas fa-gem w-5 text-center"></i> Jewelry</button>
+                <button onclick="searchCategory('women handbag crossbody bag')" class="side-cat"><i class="fas fa-bag-shopping w-5 text-center"></i> Bags</button>
+                <button onclick="searchCategory('hair growth oil edge control braids')" class="side-cat"><i class="fas fa-bottle-droplet w-5 text-center"></i> Hair Care</button>
+                <button onclick="searchCategory('makeup brushes beauty tools sponge')" class="side-cat"><i class="fas fa-paintbrush w-5 text-center"></i> Beauty Tools</button>
+            </div>
+        </aside>
+
+        <!-- Product area -->
+        <main class="flex-1 min-w-0">
         <!-- Budget strip (shown on the home page) -->
         <section id="budgetStrip" class="hidden mb-8 bg-gradient-to-r from-glow-50 to-glow-100 rounded-2xl p-4 border border-glow-100">
             <div class="flex items-center justify-between mb-3">
@@ -186,7 +194,8 @@
             </button>
         </div>
         <div id="loadMoreSentinel" class="h-4"></div>
-    </main>
+        </main>
+    </div>
 
     <!-- ======================= HOW IT WORKS ======================= -->
     <section id="how-it-works" class="bg-white border-t border-glow-100">
@@ -507,6 +516,10 @@
         .cat-chip-deal:hover { transform: translateY(-1px); box-shadow: 0 9px 22px -4px rgba(219,39,119,.65); }
         .cat-chip-deal i { animation: flamePulse 1.6s ease-in-out infinite; }
         @keyframes flamePulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.15); opacity: .85; } }
+        .side-cat { display: flex; align-items: center; gap: 9px; width: 100%; text-align: left; padding: 9px 12px; border-radius: 12px; font-size: 13px; font-weight: 600; color: #475569; transition: all .15s; }
+        .side-cat:hover { background: #fce7f3; color: #831843; }
+        .side-cat i { color: #db2777; font-size: 13px; }
+        .side-cat-deal { color: #be185d; font-weight: 800; }
         .provider-btn.selected { border-color: #db2777 !important; background: #fdf2f8; }
         .faq-item { background: #fdf2f8; border-radius: 16px; padding: 16px 20px; }
         .faq-item summary { font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
@@ -1186,8 +1199,15 @@
     if ('IntersectionObserver' in window) {
         new IntersectionObserver(entries => {
             if (entries.some(e => e.isIntersecting)) loadMoreProducts();
-        }, { rootMargin: '700px' }).observe($('loadMoreSentinel'));
+        }, { rootMargin: '900px' }).observe($('loadMoreSentinel'));
     }
+    // Fallback: also load more when the viewport nears the bottom (covers browsers/layouts
+    // where the observer doesn't fire reliably). loadMoreProducts() guards against double-runs.
+    window.addEventListener('scroll', () => {
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 1000) {
+            loadMoreProducts();
+        }
+    }, { passive: true });
 
     renderCart();
     loadProducts('');
