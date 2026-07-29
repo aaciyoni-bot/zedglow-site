@@ -1,1 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fb7185"/><stop offset=".55" stop-color="#be185d"/><stop offset="1" stop-color="#831843"/></linearGradient><radialGradient id="gl" cx=".8" cy=".2" r=".6"><stop offset="0" stop-color="#f4d58d" stop-opacity=".5"/><stop offset="1" stop-color="#f4d58d" stop-opacity="0"/></radialGradient><linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7e2ad"/><stop offset="1" stop-color="#e3ae4e"/></linearGradient></defs><rect width="512" height="512" fill="url(#bg)"/><rect width="512" height="512" fill="url(#gl)"/><path d="M256,112 C274,226 286,238 400,256 C286,274 274,286 256,400 C238,286 226,274 112,256 C226,238 238,226 256,112 Z" fill="url(#gold)"/><path d="M372,150 C378,182 382,186 414,192 C382,198 378,202 372,234 C366,202 362,198 330,192 C362,186 366,182 372,150 Z" fill="#fff" fill-opacity=".9"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+<defs>
+            <radialGradient id="zg-badge" cx="0.32" cy="0.24" r="0.95">
+              <stop offset="0" stop-color="#ff93c4"></stop><stop offset="0.34" stop-color="#f53f92"></stop><stop offset="0.7" stop-color="#c60063"></stop><stop offset="1" stop-color="#780044"></stop>
+            </radialGradient>
+            <linearGradient id="zg-gold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#fff3c9"></stop><stop offset="0.3" stop-color="#f0c65f"></stop><stop offset="0.62" stop-color="#c9932a"></stop><stop offset="1" stop-color="#f6dd9a"></stop>
+            </linearGradient>
+            <linearGradient id="zg-gold2" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#b6821f"></stop><stop offset="0.5" stop-color="#efcd72"></stop><stop offset="1" stop-color="#8f6516"></stop>
+            </linearGradient>
+            <linearGradient id="zg-lip" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff9ec4"></stop><stop offset="0.4" stop-color="#e8306f"></stop><stop offset="1" stop-color="#9c0d3f"></stop>
+            </linearGradient>
+            <linearGradient id="zg-dark" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#5a4258"></stop><stop offset="0.5" stop-color="#33203a"></stop><stop offset="1" stop-color="#1b0f21"></stop>
+            </linearGradient>
+            <linearGradient id="zg-powder" x1="0" y1="0" x2="0.6" y2="1">
+              <stop offset="0" stop-color="#fff6f2"></stop><stop offset="0.55" stop-color="#f7d9d2"></stop><stop offset="1" stop-color="#e0aaa2"></stop>
+            </linearGradient>
+            <filter id="zg-sh" x="-30%" y="-30%" width="160%" height="160%">
+              <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#5c0035" flood-opacity="0.3"></feDropShadow>
+            </filter>
+          </defs>
+          <g filter="url(#zg-sh)">
+            <circle cx="512" cy="512" r="452" fill="url(#zg-badge)"></circle>
+            <circle cx="512" cy="512" r="452" fill="none" stroke="url(#zg-gold)" stroke-width="26"></circle>
+            <circle cx="512" cy="512" r="398" fill="none" stroke="url(#zg-gold2)" stroke-width="5" opacity="0.75"></circle>
+            <path d="M120 470 A452 452 0 0 1 560 66 A452 452 0 0 0 138 560 Z" fill="#ffffff" opacity="0.2"></path>
+          </g>
+          <g transform="translate(512 552) scale(0.72) translate(-512 -552)">
+          <g transform="rotate(-16 330 560)">
+            <rect x="288" y="470" width="86" height="230" rx="14" fill="url(#zg-dark)"></rect>
+            <rect x="288" y="470" width="30" height="230" rx="14" fill="#ffffff" opacity="0.14"></rect>
+            <rect x="278" y="416" width="106" height="66" rx="16" fill="url(#zg-gold2)"></rect>
+            <path d="M300 416 C300 330 348 274 348 190 C388 268 356 340 356 416 Z" fill="url(#zg-dark)"></path>
+          </g>
+          <g transform="rotate(14 560 520)">
+            <rect x="516" y="472" width="96" height="228" rx="16" fill="url(#zg-gold)"></rect>
+            <rect x="516" y="472" width="34" height="228" rx="16" fill="#ffffff" opacity="0.3"></rect>
+            <rect x="508" y="424" width="112" height="60" rx="10" fill="url(#zg-gold2)"></rect>
+            <path d="M528 424 V300 C528 268 552 246 582 246 C604 246 616 262 616 286 V424 Z" fill="url(#zg-lip)"></path>
+            <path d="M528 424 V300 C528 272 546 250 570 248 C556 268 550 292 550 316 V424 Z" fill="#ffffff" opacity="0.28"></path>
+          </g>
+          <g transform="rotate(24 720 540)">
+            <rect x="686" y="470" width="70" height="242" rx="18" fill="url(#zg-gold2)"></rect>
+            <rect x="686" y="470" width="24" height="242" rx="14" fill="#ffffff" opacity="0.22"></rect>
+            <path d="M700 470 L692 372 C688 336 704 316 722 316 C740 316 754 338 750 372 L742 470 Z" fill="url(#zg-dark)"></path>
+            <path d="M704 316 C688 264 706 214 722 176 C740 214 756 266 740 316 Z" fill="#2a1830"></path>
+          </g>
+          <g transform="translate(0 34)">
+            <ellipse cx="512" cy="742" rx="176" ry="120" fill="url(#zg-gold2)"></ellipse>
+            <ellipse cx="512" cy="726" rx="176" ry="120" fill="url(#zg-gold)"></ellipse>
+            <ellipse cx="512" cy="722" rx="132" ry="86" fill="url(#zg-powder)"></ellipse>
+            <ellipse cx="470" cy="700" rx="52" ry="30" fill="#ffffff" opacity="0.6"></ellipse>
+          </g>
+          </g>
+</svg>
