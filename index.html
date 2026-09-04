@@ -49,6 +49,16 @@
         #productGrid > * { transition: transform .2s ease, box-shadow .2s ease; }
         #productGrid > *:hover { transform: translateY(-4px); box-shadow: 0 18px 42px -14px rgba(190,24,93,.32); }
         #heroSection { border-bottom: 1px solid rgba(227,174,78,.4); }
+        /* --- Cart drawer: fit the visible viewport on mobile + clear PWA safe areas (fixes X/close and top/bottom cutoff) --- */
+        #cartDrawer {
+            height: 100vh;            /* fallback for browsers without dvh */
+            height: 100dvh;           /* fit the visible viewport (mobile browser chrome) */
+            max-height: 100vh;
+            max-height: 100dvh;
+        }
+        #cartDrawer > div:first-child { padding-top: calc(1rem + env(safe-area-inset-top)); }        /* keep the close (X) below the status bar/notch */
+        #cartDrawer > div:last-child  { padding-bottom: calc(1rem + env(safe-area-inset-bottom)); }  /* keep checkout above the home indicator */
+        #cartItems { overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
     </style>
 </head>
 <body class="bg-glow-50 font-sans text-slate-800 min-h-screen flex flex-col">
