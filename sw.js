@@ -1,5 +1,5 @@
 /* ZedGlow service worker - enables app installation and basic offline shell */
-const CACHE = 'zedglow-site-products-20260920';
+const CACHE = 'zedglow-site-storefront-20260921';
 
 self.addEventListener('install', e => {
     self.skipWaiting();
